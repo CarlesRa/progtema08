@@ -1,4 +1,4 @@
-package tk.carlesramos.progtema08.exercicistema08;
+package tk.carlesramos.progtema08.exercici04;
 
 public class Punt {
     private double x;
