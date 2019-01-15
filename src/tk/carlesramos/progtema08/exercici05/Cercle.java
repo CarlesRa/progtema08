@@ -1,5 +1,7 @@
 package tk.carlesramos.progtema08.exercicistema08;
 
+import tk.carlesramos.progtema08.exercici04.Punt;
+
 public class Cercle {
     private Punt punt;
     private double radi;
