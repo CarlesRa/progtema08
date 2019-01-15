@@ -1,9 +1,9 @@
 package tk.carlesramos.progtema08.exercici04;
 
-public class Principal {
+public class Principal04 {
     private double x;
     private double y;
-    public Principal(){
+    public Principal04(){
         Punt p1 = new Punt(12,14);
         Punt p2 = new Punt();
         Punt p3 = new Punt(15,2);
