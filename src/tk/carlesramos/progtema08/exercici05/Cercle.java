@@ -1,4 +1,4 @@
-package tk.carlesramos.progtema08.exercicistema08;
+package tk.carlesramos.progtema08.exercici05;
 
 import tk.carlesramos.progtema08.exercici04.Punt;
 
