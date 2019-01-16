@@ -14,6 +14,11 @@ public class Cercle {
         radi = 0;
     }
 
+    public Cercle(double x, double y,double radi){
+        this.radi=radi;
+        this.punt=new Punt(x,y);
+    }
+
     @Override
     public String toString() {
         return "Cercle{" +
