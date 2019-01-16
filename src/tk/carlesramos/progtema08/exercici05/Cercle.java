@@ -1,7 +1,5 @@
 package tk.carlesramos.progtema08.exercici05;
-
 import tk.carlesramos.progtema08.exercici04.Punt;
-
 public class Cercle {
     private Punt punt;
     private double radi;
@@ -9,6 +7,19 @@ public class Cercle {
     public Cercle(Punt punt, double radi) {
         this.punt = punt;
         this.radi = radi;
+    }
+
+    public Cercle(){
+        punt = new Punt();
+        radi = 0;
+    }
+
+    @Override
+    public String toString() {
+        return "Cercle{" +
+                "punt=" + punt +
+                ", radi=" + radi +
+                '}';
     }
 
     public Punt getPunt() {
@@ -27,16 +38,34 @@ public class Cercle {
         this.radi = radi;
     }
 
-    public Cercle(){
-        punt = new Punt();
-        radi = 0;
+    public double calcularDistancia(Punt p2){
+        double distancia=punt.calcularDistanciaEntreDosPunts(p2);
+        return  distancia;
     }
 
-    @Override
-    public String toString() {
-        return "Cercle{" +
-                "punt=" + punt +
-                ", radi=" + radi +
-                '}';
+    public double calcularArea(){
+        double area = Principal05.PI*Math.pow(radi,2);
+        return area;
     }
+
+    public double calcularPerimetre(){
+        double perimetre = 2*Principal05.PI*radi;
+        return perimetre;
+    }
+
+    public void visualitzarCercle(){
+        if(punt.getX()==0 && punt.getY()==0){
+            System.out.println("Cercle de radi "+radi
+            +" cm situat en l'origen de coordenades.");
+
+
+        }
+        else{
+            System.out.print("Cercle de radi "+radi
+            +" cm situat en el punt ");
+            punt.visualitzarPunt();
+        }
+    }
+
+
 }
