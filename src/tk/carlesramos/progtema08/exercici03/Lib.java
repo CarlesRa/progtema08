@@ -172,22 +172,22 @@ public class Lib{
     }
     public static int calcularEdad(Calendar fechaNac) {
 
-        Calendar fechaActual = Calendar.getInstance();
-        // Cálculo de las diferencias.
-        int years = fechaActual.get(Calendar.YEAR) - fechaNac.get(Calendar.YEAR);
-        int months = fechaActual.get(Calendar.MONTH) - fechaNac.get(Calendar.MONTH);
-        int days = fechaActual.get(Calendar.DAY_OF_MONTH) - fechaNac.get(Calendar.DAY_OF_MONTH);
-        /*comprovem si el mes del aniversari es posterior a la data
-        o si estem en el mes pero no ha arrivat el dia*/
-        if(months < 0 || months==0 && days < 0){
-            years--;
+            Calendar fechaActual = Calendar.getInstance();
+            // Cálculo de las diferencias.
+            int years = fechaActual.get(Calendar.YEAR) - fechaNac.get(Calendar.YEAR);
+            int months = fechaActual.get(Calendar.MONTH) - fechaNac.get(Calendar.MONTH);
+            int days = fechaActual.get(Calendar.DAY_OF_MONTH) - fechaNac.get(Calendar.DAY_OF_MONTH);
+            /*comprovem si el mes del aniversari es posterior a la data
+            o si estem en el mes pero no ha arrivat el dia*/
+            if( days>0 && months<=0){
+                years--;
+            }
+            //en cas de que ja haja pasat la data
+            else if(months>=0 && days>0){
+                years++;
+            }
+            return years;
         }
-        //en cas de que ja haja pasat la data
-        if(months<=0 && days>=0){
-            years++;
-        }
-        return years;
-    }
 }
 
 
